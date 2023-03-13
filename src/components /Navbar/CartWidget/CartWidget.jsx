@@ -1,7 +1,9 @@
+import "./CartWidget.css"
+
 export default function CartWidget(props) {
 	return(
-		<div>
-        	<a className="nav_cart" href= " " > 🛒</a>
+		<div className="nav_cart">
+        	<a href= " " > 🛒</a>
         </div>
 	)
-}
+};

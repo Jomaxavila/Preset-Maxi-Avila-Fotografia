@@ -27,12 +27,13 @@
   .nav_items {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
   }
   
   .nav_items ul {
 	display: flex;
 	list-style: none;
+	justify-content: space-between;
+	gap: 2rem;
   }
   
   .nav_items li {

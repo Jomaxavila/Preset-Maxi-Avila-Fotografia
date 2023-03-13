@@ -13,25 +13,26 @@ export default function App(props) {
       <ItemsListContainer greeting="Bienvenidos a mi tienda Online"/>
       <Item
      title="Color"
-     img=""
+     img="/imgs/color1.jpg"
      price="500"
      description="Colores sotf "
      />
      <Item
      title="Blanco y Negro"
-     img=""
+     img="/imgs/blancoyNegro1.jpg"
      price="500"
      description="Blancos y negros modernos"
+     
      />
      <Item
      title="Film"
-     img=""
+     img="/imgs/film1.jpg"
      price="500"
      description="Estilo film "
      />
      <Item
      title="Vintage"
-     img=""
+     img="/imgs/vintage1.jpg"
      price="500"
      description="Estilo vintage Retros"
      />

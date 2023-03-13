@@ -1,0 +1,11 @@
+.nav_cart{
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	margin: 0 10px;
+	transform: translateY(0);
+	transition: transform 0.2s ease-in-out;
+}
+.nav_cart:hover{
+	transform: translateY(-2px);
+}
