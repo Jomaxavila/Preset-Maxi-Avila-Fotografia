@@ -10,7 +10,7 @@ export default function App(props) {
   return (
     <div>
       <Navbar/>
-      <ItemsListContainer greeting="Bienvenidos a mi tienda en línea"/>
+      <ItemsListContainer greeting="Bienvenidos a mi tienda Online"/>
       <Item
      title="Color"
      img=""

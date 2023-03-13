@@ -5,10 +5,8 @@ export default function Navbar (props){
      return (
     
 	     <div className="nav_container">
-		     <nav className="nav_bar">
-                    <div className="nav_brand">
-                         <h1 href=" "> Maxi Avila Fotografia Presets </h1>
-                    <div/>
+		     <nav className="nav_bar"> 
+                    <h1    className="nav_brand" href=" "> Maxi Avila Fotografia Presets </h1>
                     <div className="nav_items">
                               <ul>
                                    <li >
@@ -26,7 +24,6 @@ export default function Navbar (props){
                               </ul>
                     </div>
                     <CartWidget/>
-                    </div>
                </nav>
 	     </div>
 	);
