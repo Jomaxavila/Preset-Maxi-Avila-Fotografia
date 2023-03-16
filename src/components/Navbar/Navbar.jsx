@@ -1,5 +1,5 @@
 import "./Navbar.css"
-import CartWidget from "./CartWidget/CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 
 export default function Navbar (props){
      return (
@@ -23,7 +23,7 @@ export default function Navbar (props){
                                    </li>
                               </ul>
                     </div>
-                    <CartWidget/>
+               <CartWidget/>
                </nav>
 	     </div>
 	);
