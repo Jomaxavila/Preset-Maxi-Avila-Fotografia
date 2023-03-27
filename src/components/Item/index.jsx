@@ -14,11 +14,10 @@ function Item (props) {
           <small>{props.description}</small>
           <div>
           <Link to={`/detail/${props.id}`}>
-            <p> Ver Detalle</p>
-          </Link>
             <Button>
-              AGREGAR
+              DETALLE
             </Button>
+          </Link>
           </div>
         </div>
       </div>

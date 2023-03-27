@@ -16,9 +16,8 @@ export default function App(props) {
         <Routes>
           <Route path="/" element={<ItemListContainer/>} />
           <Route path="/cart" element={<CartContainer/>} />
-          <Route path='/category/:categoryid' element={<ItemListContainer/>}/>
           <Route path='/detail/:presetid' element={<ItemDetailContainer/>}/>
-
+          <Route path='/category/:categoryid' element={<ItemListContainer/>}/>
         </Routes>
     </BrowserRouter>
   );
