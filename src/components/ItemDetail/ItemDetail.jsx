@@ -7,20 +7,21 @@ const ItemDetail = ({product}) => {
   console.log(product);
   return (
     <Flex>
-        <div className="item-card">
-          <div className="item-card_header">
-            <h3>{product.title}</h3>
+      <div>
+          <div className="item-card">
+            <div className="item-card_header">
+              <h3>{product.title}</h3>
+            </div>
+              <img src={product.img} className="item-card_img" alt={product.title} />
+              <p className="descr">{product.description}</p>
+              <p>Stock: {product.stock}</p>
+            <div>
+            <Button>
+                AGREGAR
+            </Button>
+            </div>
           </div>
-          <p>{product.description}</p>
-          <p>Stock: {product.stock}</p>
-          <img src={product.img} className="item-card_img" alt={product.title} />
-          <div>
-          <Button>
-              AGREGAR
-          </Button>
-          </div>
-        
-        </div>
+      </div>
     </Flex>
   );
 }

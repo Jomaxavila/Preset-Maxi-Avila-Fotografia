@@ -11,14 +11,14 @@
 	background-color: #fff;
 	overflow: hidden;  
 	transition: all 0.20s ease-in;
-	cursor: pointer;
 	justify-content: space-between;
 }
 
 
+
   .item-card_header{
 	background-color: rgb(233, 233, 233);
-	font-size: large;
+	font-size: medium;
   }
   
   .item-card_header h2{
@@ -67,6 +67,10 @@
 	color: #8c8c8e;
   }
   
+  .descr{
+	font-size: 12px;
+	margin: 10px;
+  }
   .item-card_favicon.favorite{
 	display: block;
 	background-color: rgb(223, 117, 84);

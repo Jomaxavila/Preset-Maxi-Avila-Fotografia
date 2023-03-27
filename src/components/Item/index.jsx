@@ -11,7 +11,7 @@ function Item (props) {
           </div>
             <img src={props.img} className="item-card_img" alt="imagen"></img>
           <h4>$ {props.price}</h4>
-          <small>{props.description}</small>
+          <small className="descr">{props.description}</small>
           <div>
           <Link to={`/detail/${props.id}`}>
             <Button>
