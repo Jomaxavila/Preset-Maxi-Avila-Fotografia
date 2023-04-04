@@ -1,10 +1,21 @@
-import "./Button.css";
+import styles from "./Button.module.css";
 
-export default function Button(props) {
+const Button = (props) => {
+  const styleButton = {
+    backgroundColor: props.color
+  };
 
   return (
-    <button className="btn">
-      {props.children || props.text}
+    <button
+      onClick={ props.onPress}
+      disabled={props.disabled}
+      className={styles.btn}
+      style={styleButton}
+    >
+      {props.text}
+      {props.children}
     </button>
   );
-}
+};
+
+export default Button;
