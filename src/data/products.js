@@ -67,7 +67,7 @@ const products = [
 	},
 	{
 	  id: 8,
-	  title: "Arg 85",
+	  title: "Arg 86",
 	  category: "Film",
 	  price: 500,
 	  stock: 400,

@@ -8,7 +8,6 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CartContainer from './components/CartContainer/CartContainer';
 import  CartProvider  from './context/cartContext';
 
-
 function App (props) {
 
   return (

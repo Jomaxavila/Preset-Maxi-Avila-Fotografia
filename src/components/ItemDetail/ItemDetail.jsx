@@ -4,6 +4,7 @@ import Flex from "../Flex/Flex";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
+import Loader from "../Loader/Loader";
 
 const ItemDetail = ({ product }) => {
   const { cart, setCart } = useContext(cartContext);
@@ -19,6 +20,9 @@ const ItemDetail = ({ product }) => {
     };
     setCart([...cart, newCartItem]);
   };
+  if (product.length === 0){
+    return <Loader/>
+  }
 
   return (
     <Flex>

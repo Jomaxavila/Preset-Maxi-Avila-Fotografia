@@ -33,6 +33,14 @@ const CartProvider = ({ children }) => {
     });
     return totalPrice;
   };
+  const getItemCountInCart = () => {
+    let totalCount = 0;
+    cart.forEach((item) => {
+      totalCount += item.count;
+    });
+    return totalCount;
+  };
+  
 
   return (
     <cartContext.Provider
@@ -43,6 +51,7 @@ const CartProvider = ({ children }) => {
         removeItemFromCart,
         clearCart,
         getPriceInCart,
+        getItemCountInCart,
       }}
     >
       {children}
