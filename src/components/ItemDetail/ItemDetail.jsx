@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
 import Flex from "../Flex/Flex";
 import ItemCount from "../ItemCount/ItemCount";
@@ -8,7 +8,7 @@ import Loader from "../Loader/Loader";
 
 const ItemDetail = ({ product }) => {
   const { cart, setCart } = useContext(cartContext);
-
+  const [addedToCart, setAddedToCart] = useState(false);
 
   const onAddToCart = (count) => {
     const newCartItem = {
@@ -19,7 +19,9 @@ const ItemDetail = ({ product }) => {
       count: count,
     };
     setCart([...cart, newCartItem]);
+    setAddedToCart(true);
   };
+
   if (product.length === 0){
     return <Loader/>
   }
@@ -46,7 +48,15 @@ const ItemDetail = ({ product }) => {
             <Link to={`/detail/${product.id + 1}`}>
               <Button>Siguiente</Button>
             </Link>
-            <ItemCount onAddToCart={onAddToCart} />
+            <div>
+                {addedToCart ? (
+                  <Link to="/cart">
+                    <Button>Ir al carrito</Button>
+                  </Link>
+                      ) :(
+                  <ItemCount onAddToCart={onAddToCart} />
+            )}
+            </div>
           </div>
         </div>
       </div>

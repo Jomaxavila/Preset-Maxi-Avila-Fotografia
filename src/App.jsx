@@ -8,22 +8,25 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CartContainer from './components/CartContainer/CartContainer';
 import  CartProvider  from './context/cartContext';
 
+
 function App (props) {
 
   return (
-    <CartProvider>
-      <BrowserRouter>
-            <Navbar />
-            <Title />
-            <Routes>
-              <Route path="/" element={<ItemListContainer/>} />
-              <Route path="/cart" element={<CartContainer/>} />
-              <Route path='/detail/:presetid' element={<ItemDetailContainer/>}/>
-              <Route path='/category/:categoryid' element={<ItemListContainer/>}/>
-            </Routes>
-        </BrowserRouter>
-      </CartProvider>
+    <>
+      <CartProvider>
+        <BrowserRouter>
+              <Navbar />
+              <Title />
+              <Routes>
+                <Route path="/" element={<ItemListContainer/>} />
+                <Route path="/cart" element={<CartContainer/>} />
+                <Route path='/detail/:presetid' element={<ItemDetailContainer/>}/>
+                <Route path='/category/:categoryid' element={<ItemListContainer/>}/>
+                <Route path="/checkout/:orderid" element={<checkout/>} />
+              </Routes>
+          </BrowserRouter>
+        </CartProvider>
+      </>
       );
     }
     export default App;
-

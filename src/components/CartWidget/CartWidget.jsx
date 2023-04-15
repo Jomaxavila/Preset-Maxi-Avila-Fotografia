@@ -8,7 +8,7 @@ export default function CartWidget(props) {
   return (
     <div className="nav_cart">
       🛒
-      <span className="cartWidget_count">{getItemCountInCart()}</span>
+      {getItemCountInCart() > 0 && <span className="cartWidget_count">{getItemCountInCart()}</span>}
     </div>
   )
 };

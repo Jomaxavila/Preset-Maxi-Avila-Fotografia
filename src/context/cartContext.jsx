@@ -2,6 +2,7 @@ import React, { useState, createContext } from "react";
 
 export const cartContext = createContext();
 
+
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
@@ -33,6 +34,7 @@ const CartProvider = ({ children }) => {
     });
     return totalPrice;
   };
+
   const getItemCountInCart = () => {
     let totalCount = 0;
     cart.forEach((item) => {
@@ -40,7 +42,8 @@ const CartProvider = ({ children }) => {
     });
     return totalCount;
   };
-  
+
+
 
   return (
     <cartContext.Provider
@@ -52,6 +55,7 @@ const CartProvider = ({ children }) => {
         clearCart,
         getPriceInCart,
         getItemCountInCart,
+        
       }}
     >
       {children}
