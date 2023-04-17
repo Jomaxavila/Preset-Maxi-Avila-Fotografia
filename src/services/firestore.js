@@ -29,9 +29,7 @@ export async function getItems() {
 }
 
 export async function getSingleItem(idURL) {
-  //referencia
   const docRef = doc(db, "products", idURL);
-  //snapshot
   const docSnap = await getDoc(docRef);
   return { id: docSnap.id, ...docSnap.data() };
 }
@@ -39,8 +37,7 @@ export async function getSingleItem(idURL) {
 export async function getItemsByCategory(categoryid) {
   const productsRef = collection(db, "products");
 
-  /* Crear una consutlta A: productosREf  CUANDO se cumpla where( if( )) */
-  const q = query(productsRef, where("category", "==", categoryid));
+   const q = query(productsRef, where("category", "==", categoryid));
 
   const productsSnap = await getDocs(q);
   const documents = productsSnap.docs;

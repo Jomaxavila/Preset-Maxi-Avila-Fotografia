@@ -1,10 +1,10 @@
-import React from 'react'
+
 
 function checkout() {
   return (
-	<div>
-		<h1> MUCHAS GRACIAS POR TU COMPRA, TE ESPERAMOS PRONTO!
-
+<div>
+		<h1> 
+			MUCHAS GRACIAS POR TU COMPRA, TE ESPERAMOS PRONTO!
 		</h1>
 	</div>
   )

@@ -7,6 +7,8 @@ import Title from './components/Title/Title';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CartContainer from './components/CartContainer/CartContainer';
 import  CartProvider  from './context/cartContext';
+import Checkout from './components/Checkout/Checkout';
+
 
 
 function App (props) {
@@ -22,7 +24,7 @@ function App (props) {
                 <Route path="/cart" element={<CartContainer/>} />
                 <Route path='/detail/:presetid' element={<ItemDetailContainer/>}/>
                 <Route path='/category/:categoryid' element={<ItemListContainer/>}/>
-                <Route path="/checkout/:orderid" element={<checkout/>} />
+                <Route path="/checkout/:orderid" element={<Checkout/>} />
               </Routes>
           </BrowserRouter>
         </CartProvider>

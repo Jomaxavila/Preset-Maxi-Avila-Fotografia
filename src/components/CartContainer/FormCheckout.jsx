@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./FormCheckout.css";
+
 
 export default function FormCheckout({ onCheckout }) {
   const [userData, setUserData] = useState({
@@ -31,26 +33,26 @@ export default function FormCheckout({ onCheckout }) {
   }
 
   return (
-    <>
+    <div className="form-container">
       <h1>Ingresa tus datos para completar la compra 🛍</h1>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label className="label-input">Nombre</label>
-          <input value={userData.username} name="username" type="text" required onChange={handleInputChange} />
+          <input value={userData.username} name="username" type="text" required onChange={handleInputChange} className="input-field" />
         </div>
         <div className="form-group">
           <label className="label-input">Email</label>
-          <input value={userData.email} name="email" type="email" required onChange={handleInputChange} />
+          <input value={userData.email} name="email" type="email" required onChange={handleInputChange} className="input-field" />
         </div>
         <div className="form-group">
           <label className="label-input">Teléfono</label>
-          <input value={userData.phone} name="phone" type="number" required onChange={handleInputChange} />
+          <input value={userData.phone} name="phone" type="number" required onChange={handleInputChange} className="input-field" />
         </div>
-        <button onClick={onSubmit} type="submit">
-          Crear orden
-        </button>
-        <button onClick={clearFormData}>Cancelar</button>
+        <div className="submit-buttons">
+          <button type="submit">Crear orden</button>
+          <button onClick={clearFormData}>Cancelar</button>
+        </div>
       </form>
-    </>
+    </div>
   );
 }

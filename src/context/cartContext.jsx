@@ -7,7 +7,7 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addItemToCart = (item, count) => {
-    const itemIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
+    const itemIndex = cart.findIndex((cartItem) => cartItem.index === item.index);
 
     if (itemIndex === -1) {
       setCart([...cart, { ...item, count }]);
@@ -42,9 +42,7 @@ const CartProvider = ({ children }) => {
     });
     return totalCount;
   };
-
-
-
+  
   return (
     <cartContext.Provider
       value={{
