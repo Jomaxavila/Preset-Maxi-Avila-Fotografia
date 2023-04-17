@@ -33,7 +33,7 @@ export default function FormCheckout({ onCheckout }) {
   }
 
   return (
-    <div className="form-container">
+    <div className="cart-total">
       <h1>Ingresa tus datos para completar la compra 🛍</h1>
       <form onSubmit={onSubmit}>
         <div className="form-group">

@@ -1,13 +1,17 @@
+import { useParams } from 'react-router-dom';
+import Flex from '../Flex/Flex';
 
 
-function checkout() {
+function Checkout() {
+  const { orderid} = useParams();
   return (
-<div>
-		<h1> 
-			MUCHAS GRACIAS POR TU COMPRA, TE ESPERAMOS PRONTO!
-		</h1>
-	</div>
-  )
+	<Flex>
+		<div>
+			<h1>Muchas gracias por tu compra </h1>
+		<p className="item-card_price"> Este es tu numero de orden {orderid}</p>
+		</div>
+		</Flex>
+  );
 }
 
-export default checkout
+export default Checkout;

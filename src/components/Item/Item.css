@@ -46,6 +46,7 @@
 	.item-card_detail {
 		height: 140px;
 		padding: 12px 8px;
+		margin: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

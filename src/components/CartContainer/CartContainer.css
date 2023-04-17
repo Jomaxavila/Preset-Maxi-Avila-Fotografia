@@ -1,25 +1,108 @@
-.cartList{
-	border-spacing: 0;
+.cart-container {
+	background-color: #e2e2e2;
+	border: 1px solid rgb(216, 209, 209);
+	border-radius: 4px;
+	padding: 20px;
+	margin: 30px;
+	flex-direction: row;
+  }
+  
+  .cart-title {
+	font-size: 24px;
+	margin: 20px;
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	border: 1px solid rgb(9, 9, 9);
+	border-radius: 4px;
+	background-color: rgb(237, 228, 221);
+  }
+
+  .cart-total{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #f5f5f5;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgb(169, 168, 168);
+	margin: 60px;
+  }
+
+
+  .cart-item {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	flex-direction: row; 
+	justify-content:space-between; 
+	margin: 120px; 
 	border-radius: 5px;
-	border: solid 1px rgb(233, 244, 75);  
-	width: 95%;
-	margin: 15px auto;
-	text-align: center;
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.15);
+	box-shadow: 0 0 5px rgb(184, 184, 184);
   }
   
-  .cartList_head{
-	background-color: rgb(233, 244, 75);;
-	margin: 8px auto;
+  .cart-item img {
+	margin-right: 10px;
   }
   
-  .cartList_row{
-	line-height: 56px;
+  .cart-item h2 {
+	font-size: 18px;
+	margin-bottom: 5px;
   }
   
-  .cartList_detail{
-	color: #787878;
-	text-align: center;
-	line-height: 1.5em;
-	width: 100%;
+  .cart-item p {
+	margin-bottom: 5px;
   }
+  
+  .cart-item button {
+	color: rgb(255, 255, 255);
+	width: 90px;
+	height: 40px;
+	background-color: rgb(54, 111, 175);
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	margin: 20px;
+	padding: auto;
+  }
+  
+  .cart-item button:hover {
+	background-color: #b5291e;
+	box-shadow: 0px 4px 5px #d7d7db;
+  }
+  
+  .cart-summary {
+	margin: 20px;
+	gap: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content: center;
+	
+  }
+  
+  .cart-summary h3 {
+	margin-bottom: 5px;
+	align-items: center;
+
+  }
+  
+  .cart-summary button {
+	color: rgb(255, 255, 255);
+	width: 100px;
+	height: 40px;
+	background-color: rgb(85, 135, 201);
+	border-radius: 4px;
+	border: solid;
+	cursor: pointer;
+	margin: 20px;
+	align-items: center;
+
+  }
+  
+  .cart-summary button:hover {
+	background-color: #b5291e;
+	box-shadow: 0px 4px 5px #d7d7db;
+  }
+  
