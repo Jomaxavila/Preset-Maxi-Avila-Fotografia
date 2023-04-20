@@ -13,6 +13,7 @@ function ItemList (props) {
             price={producto.price}
             category={producto.category}
             img={producto.img}
+            stock={producto.stock}
           />
         ))}
       </Flex>

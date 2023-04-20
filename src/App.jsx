@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import CartContainer from './components/CartContainer/CartContainer';
 import  CartProvider  from './context/cartContext';
 import Checkout from './components/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -16,18 +17,21 @@ function App (props) {
   return (
     <>
       <CartProvider>
-        <BrowserRouter>
-              <Navbar />
-              <Title />
-              <Routes>
-                <Route path="/" element={<ItemListContainer/>} />
-                <Route path="/cart" element={<CartContainer/>} />
-                <Route path='/detail/:presetid' element={<ItemDetailContainer/>}/>
-                <Route path='/category/:categoryid' element={<ItemListContainer/>}/>
-                <Route path="/checkout/:orderid" element={<Checkout/>} />
-              </Routes>
-          </BrowserRouter>
-        </CartProvider>
+      <BrowserRouter>
+        <div className="page-container">
+          <Navbar />
+          <Title />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/cart" element={<CartContainer />} />
+            <Route path="/detail/:presetid" element={<ItemDetailContainer />} />
+            <Route path="/category/:categoryid" element={<ItemListContainer />} />
+            <Route path="/checkout/:orderid" element={<Checkout />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
       </>
       );
     }

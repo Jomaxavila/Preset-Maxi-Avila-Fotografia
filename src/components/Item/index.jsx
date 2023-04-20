@@ -10,18 +10,20 @@ function Item (props) {
             <h3>{props.title}</h3>
           </div>
             <img src={props.img} className="item-card_img" alt="imagen"></img>
-          <h4>$ {props.price}</h4>
-          <small className="descr">{props.description}</small>
+          <h5>$ {props.price}</h5>
+          <small className="descr">{props.category}</small>
           <div>
-          <Link to={`/detail/${props.id}`}>
+            {props.stock === 0 && <small> Sin Stock </small>}
+            {props.stock > 0 && (
+              <Link to={`/detail/${props.id}`}>
             <Button>
-              DETALLE
+              Detalle
             </Button>
           </Link>
+            )}
           </div>
         </div>
       </div>
   );
 }
-
 export default Item;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./FormCheckout.css";
-
+import swal from 'sweetalert';
 
 export default function FormCheckout({ onCheckout }) {
   const [userData, setUserData] = useState({
@@ -21,6 +21,7 @@ export default function FormCheckout({ onCheckout }) {
   function onSubmit(evt) {
     evt.preventDefault();
     onCheckout(userData);
+    swal("Orden creada", "", "success");
   }
 
   function clearFormData(evt) {
@@ -34,7 +35,7 @@ export default function FormCheckout({ onCheckout }) {
 
   return (
     <div className="cart-total">
-      <h1>Ingresa tus datos para completar la compra 🛍</h1>
+      <h1>Ingresa tus datos para finalizar la compra!✅ </h1>
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label className="label-input">Nombre</label>

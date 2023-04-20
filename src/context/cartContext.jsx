@@ -52,7 +52,6 @@ const CartProvider = ({ children }) => {
         clearCart,
         getPriceInCart,
         getItemCountInCart,
-        
       }}
     >
       {children}

@@ -24,6 +24,8 @@
   .item-card_header h2{
 	padding: 16px 2px;
 	margin: 0px;
+	font-style: italic;
+
   }
   
   .item-card_img{

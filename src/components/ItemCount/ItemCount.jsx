@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../Button/Button";
 
 
 
@@ -11,16 +12,18 @@ const ItemCount = ({ onAddToCart }) => {
 
   return (
     <div className="item-count">
-      <button onClick={() => setCount(count - 1)} disabled={count <= 1}>
+      <Button onPress={() => setCount(count - 1)} disabled={count <= 1}>
         -
-      </button>
+      </Button>
       <span>{count}</span>
-      <button onClick={() => setCount(count + 1)} disabled={count >= 10}>
+      <Button onPress={() => setCount(count + 1)} disabled={count >= 10}>
         +
-      </button>
-      <button onClick={handleAddClick}>Agregar al carrito</button>
+      </Button>
+      <Button onPress={handleAddClick}>Agregar al carrito</Button>
     </div>
+
   );
+
 };
 
 export default ItemCount;

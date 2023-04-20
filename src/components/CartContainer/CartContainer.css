@@ -1,5 +1,5 @@
 .cart-container {
-	background-color: #e2e2e2;
+	background-color: #ebebeb;
 	border: 1px solid rgb(216, 209, 209);
 	border-radius: 4px;
 	padding: 20px;
@@ -23,23 +23,31 @@
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	background-color: #f5f5f5;
+	background-color:   #c9c6c6;
 	padding: 20px;
 	border-radius: 10px;
-	box-shadow: 0 0 10px rgb(169, 168, 168);
+	box-shadow: 0 0 10px ;
 	margin: 60px;
+	
   }
-
-
+.cart-total-dos{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	flex-direction: row;
+	
+}
   .cart-item {
 	display: flex;
 	align-items: center;
 	padding: 15px;
 	flex-direction: row; 
 	justify-content:space-between; 
+	text-align: center;
 	margin: 120px; 
 	border-radius: 5px;
-	box-shadow: 0 0 5px rgb(184, 184, 184);
+	box-shadow: 0 0 5px rgb(5, 5, 5);
   }
   
   .cart-item img {

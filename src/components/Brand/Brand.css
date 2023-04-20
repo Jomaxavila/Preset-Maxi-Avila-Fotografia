@@ -1,6 +1,8 @@
 .Brand{
-
+font-family: 'Helvetica Neue', sans-serif;
 text-decoration: none;
 list-style: none;
+font-style: italic;
+font-weight: 180;
 color:rgb(37, 37, 37);
 }

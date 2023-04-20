@@ -49,18 +49,18 @@ function CartContainer() {
               </div>
             ))}
           </div>
-          <div className="cart-total">
+          <div className="cart-total-dos">
             <h3>Total: ${getPriceInCart()}</h3>
-            <button onClick={clearCart}>Vaciar Carrito</button>
+            <Button className="btn" onPress={clearCart}>Vaciar Carrito</Button>
           </div>
           <FormCheckout onCheckout={handleCheckout} />
         </>
       ) : (
         <div className="item-card_detail">
           <h2>Tu carrito está vacío</h2>
-          <p>Vuelve al Home para agregar productos</p>
+          <p>Vuelve al <b>Home</b> para agregar productos</p>
           <Link to="/">
-           <Button className="cart-item">Volver al Home</Button>
+           <Button>Home</Button>
           </Link>
         </div>
       )}

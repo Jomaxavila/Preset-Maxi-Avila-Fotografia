@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { cartContext } from "../../context/cartContext";
 import Flex from "../Flex/Flex";
 import ItemCount from "../ItemCount/ItemCount";
@@ -18,11 +18,36 @@ const ItemDetail = ({ product }) => {
       price: product.price,
       count: count,
     };
-    setCart([...cart, newCartItem]);
+
+    // Verificar si el elemento ya existe en el carrito
+    const existingCartItem = cart.find(item => item.id === product.id);
+
+    if (existingCartItem) {
+      // Si ya existe, actualizar el count del elemento existente
+      const updatedCart = cart.map(item => {
+        if (item.id === product.id) {
+          return { ...item, count: item.count + count };
+        } else {
+          return item;
+        }
+      });
+      setCart(updatedCart);
+    } else {
+      // Si no existe, agregar un nuevo elemento al carrito
+      setCart([...cart, newCartItem]);
+    }
     setAddedToCart(true);
   };
 
-  if (product.length === 0){
+  useEffect(() => {
+    setAddedToCart(false);
+    return () => {
+      // Limpiar el estado agregado cuando se desmonta el componente
+      setAddedToCart(false);
+    }
+  }, [product]);
+
+  if (!product){
     return <Loader/>
   }
 
@@ -42,20 +67,24 @@ const ItemDetail = ({ product }) => {
           <p className="descr">{product.description}</p>
           <p>Stock: {product.stock}</p>
           <div>
-            <Link to={`/detail/${product.id - 1}`}>
-              <Button>Anterior</Button>
-            </Link>
-            <Link to={`/detail/${product.id + 1}`}>
-              <Button>Siguiente</Button>
-            </Link>
+            {product.id > 1 ? (
+              <Link to={`/detail/${product.id - 1}`}>
+                <Button>Anterior</Button>
+              </Link>
+            ) : null}
+            {product.id < 10 ? (
+              <Link to={`/detail/${product.id + 1}`}>
+                <Button>Siguiente</Button>
+              </Link>
+            ) : null}
             <div>
-                {addedToCart ? (
-                  <Link to="/cart">
-                    <Button>Ir al carrito</Button>
-                  </Link>
-                      ) :(
-                  <ItemCount onAddToCart={onAddToCart} />
-            )}
+              {addedToCart ? (
+                <Link to="/cart">
+                  <Button>Ir al carrito</Button>
+                </Link>
+              ) : (
+                <ItemCount onAddToCart={onAddToCart} />
+              )}
             </div>
           </div>
         </div>
