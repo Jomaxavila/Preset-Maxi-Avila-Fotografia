@@ -7,7 +7,7 @@ import Title from './components/Title/Title';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CartContainer from './components/CartContainer/CartContainer';
 import  CartProvider  from './context/cartContext';
-import Checkout from './components/Checkout/Checkout';
+import Checkout from './components/Checkout/checkout';
 import Footer from './components/Footer/Footer';
 
 
@@ -18,7 +18,6 @@ function App (props) {
     <>
       <CartProvider>
       <BrowserRouter>
-        <div className="page-container">
           <Navbar />
           <Title />
           <Routes>
@@ -28,7 +27,6 @@ function App (props) {
             <Route path="/category/:categoryid" element={<ItemListContainer />} />
             <Route path="/checkout/:orderid" element={<Checkout />} />
           </Routes>
-        </div>
         <Footer />
       </BrowserRouter>
     </CartProvider>

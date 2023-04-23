@@ -1,21 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import productsDatabase from "../../data/products";
+import { getSingleItem } from "../../services/firestore";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { cartContext } from "../../context/cartContext";
 
-function getSingleItem(id) {
-  const promesa = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const itemRequested = productsDatabase.find((item) => {
-        return item.id === parseInt(id);
-      });
-      resolve(itemRequested);
-    }, 1000);
-  });
-
-  return promesa;
-}
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
@@ -25,7 +13,6 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     getSingleItem(presetid).then((respuesta) => {
-      console.log("promesa cumplida", respuesta);
       setProduct(respuesta);
     });
   }, [presetid]);

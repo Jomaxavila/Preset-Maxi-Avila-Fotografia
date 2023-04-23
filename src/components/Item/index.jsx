@@ -16,6 +16,7 @@ function Item (props) {
             {props.stock === 0 && <small> Sin Stock </small>}
             {props.stock > 0 && (
               <Link to={`/detail/${props.id}`}>
+                
             <Button>
               Detalle
             </Button>
