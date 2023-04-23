@@ -43,7 +43,6 @@ export async function getItemsByCategory(categoryid) {
   const docsData = documents.map((doc) => {
     return { id: doc.id, ...doc.data() };
   });
-  console.log(docsData)
   return docsData;
   
 }

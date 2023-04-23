@@ -3,7 +3,6 @@ import "./Item.css"
 import {Link} from "react-router-dom"
 
 function Item (props) {
-  console.log(props)
   return (
       <div>
         <div id={props.id} className="item-card">
