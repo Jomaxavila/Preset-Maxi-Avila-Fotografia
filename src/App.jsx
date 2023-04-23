@@ -7,7 +7,7 @@ import Title from './components/Title/Title';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import CartContainer from './components/CartContainer/CartContainer';
 import  CartProvider  from './context/cartContext';
-import Checkout from './components/Checkout/Checkout';
+import Checkout from './components/Checkout/checkout';
 import Footer from './components/Footer/Footer';
 
 

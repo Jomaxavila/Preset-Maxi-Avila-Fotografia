@@ -1,12 +1,12 @@
 import React, { useState, createContext } from "react";
-export const cartContext = createContext();
 
+export const cartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addItemToCart = (item, count) => {
-    const itemIndex = cart.findIndex((cartItem) => cartItem.index === item.index);
+    const itemIndex = cart.findIndex((cartItem) => cartItem.id === item.id);
 
     if (itemIndex === -1) {
       setCart([...cart, { ...item, count }]);
@@ -41,7 +41,21 @@ const CartProvider = ({ children }) => {
     });
     return totalCount;
   };
-  
+// función para agregar el item al carrito
+const addToCart = (product, quantity) => {
+  const index = cart.findIndex((item) => item.id === product.id);
+  if (index !== -1) {
+    // el item ya existe en el carrito, actualizamos la cantidad
+    const newCart = [...cart];
+    newCart[index].count += quantity;
+    setCart(newCart);
+  } else {
+    // el item no existe en el carrito, lo agregamos
+    const newCartItem = { ...product, count: quantity };
+    setCart([...cart, newCartItem]);
+  }
+};
+
   return (
     <cartContext.Provider
       value={{
@@ -52,6 +66,7 @@ const CartProvider = ({ children }) => {
         clearCart,
         getPriceInCart,
         getItemCountInCart,
+        addToCart,
       }}
     >
       {children}

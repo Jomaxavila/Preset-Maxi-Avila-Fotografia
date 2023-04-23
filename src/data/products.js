@@ -54,7 +54,7 @@ const products = [
 		price: 300,
 		stock: 40,
 		img: "/img/bn3.JPG",
-		description:"El preset Latitude puede agregar un toque de misterio y dramatismo a las imágenes, con un aumento en el contraste y una reducción en la saturación. Es ideal para fotografías de moda y retratos con una estética más oscura."
+		description:"El preset Latitude puede agregar un toque de misterio y dramatismo a las imágenes,contraste y una reducción en la saturación. Es ideal para fotografías de moda y retratos con una estética más oscura."
 	  },
 	{
 	  id: 7,
