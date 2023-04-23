@@ -34,7 +34,7 @@ function CartContainer() {
       {cart.length > 0 ? (
         <>
           <div>
-          <h1 className="cart-total">Carrito de compras</h1>
+          <h1 className="cart-title">Carrito de compras</h1>
             {cart.map((item) => (
               <div className="cart-item" key={item.id}>
                 <img height={50} src={item.img} alt={item.title} />
