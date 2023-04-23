@@ -23,31 +23,38 @@
 	margin: auto;
 	justify-content: space-between;
   }
+  .footer__icon:hover {
+	transform: scale(1.2);
+	transition: all ease-out 300ms;
+	color: black;
+  }
   
   .footer__links {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
   }
-  
+
   .footer__links a {
 	color: #333;	
 	color: rgb(98, 95, 95);
 	text-decoration: none;
 	font-size: 18px;
 	margin-right: 1rem;
-	
+  }
+  .footer__links a:hover {
+	transform: scale(1.2);
+	transition: all ease-out 300ms;
+	color: black;
   }
   .copiright{
 	text-decoration:none;
 	color: rgb(98, 95, 95);
 	display: flex;
 	justify-content: space-between;
-
-	
   }
-  .footer__links link:last-child {
-	margin-right: 0;
+  .copiright:hover {
+	text-decoration: underline;
   }
   
  
