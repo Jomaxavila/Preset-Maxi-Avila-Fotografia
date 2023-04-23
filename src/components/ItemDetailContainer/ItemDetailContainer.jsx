@@ -16,7 +16,6 @@ function ItemDetailContainer() {
   }, [presetid]); 
 
 
-
   return (
     <ItemDetail product={product} addToCart={addToCart} />
   );
