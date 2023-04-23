@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import Loader from "../Loader/Loader";
 
+
+
 const ItemDetail = ({ product }) => {
   const { addItemToCart } = useContext(cartContext);
   const [addedToCart, setAddedToCart] = useState(false);
@@ -15,6 +17,7 @@ const ItemDetail = ({ product }) => {
     addItemToCart(product, count);
     setAddedToCart(true);
   };
+
 
   if (!product){
     return <Loader/>
@@ -36,16 +39,6 @@ const ItemDetail = ({ product }) => {
           <p className="descr">{product.description}</p>
           <p>Stock: {product.stock}</p>
           <div>
-            {product.id > 1 ? (
-              <Link to={`/detail/${product.id - 1}`}>
-                <Button>Anterior</Button>
-              </Link>
-            ) : null}
-            {product.id < 10 ? (
-              <Link to={`/detail/${product.id + 1}`}>
-                <Button>Siguiente</Button>
-              </Link>
-            ) : null}
             <div>
               {addedToCart ? (
                 <Link to="/cart">

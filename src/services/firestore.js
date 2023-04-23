@@ -14,11 +14,9 @@ const db = getFirestore(app);
 
 export async function getItems() {
   const productsRef = collection(db, "products");
-
   const q = query(productsRef, orderBy("index"));
   const productsSnap = await getDocs(q);
   const documents = productsSnap.docs;
-
   const docsData = documents.map((doc) => {
     return { id: doc.id, ...doc.data() };
   });
@@ -36,7 +34,6 @@ export async function getSingleItem (idURL) {
 
 export async function getItemsByCategory(categoryid) {
   const productsRef = collection(db, "products");
-
   /* Crear una consutlta A: productosREf  CUANDO se cumpla where( if( )) */
   const q = query(productsRef, where("category", "==", categoryid));
 
@@ -46,9 +43,11 @@ export async function getItemsByCategory(categoryid) {
   const docsData = documents.map((doc) => {
     return { id: doc.id, ...doc.data() };
   });
-
+  console.log(docsData)
   return docsData;
+  
 }
+
 
 export async function createOrder(order) {
   const collectionOrdersRef = collection(db, "orders");
