@@ -5,16 +5,16 @@
 	justify-content: space-between;
 	background-color: #f2f2f2;
 	padding: 1rem;
-	
-	
-  }
-  
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
   .footer__social-media {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
-
   }
   
   .footer__icon {
@@ -36,11 +36,11 @@
   }
 
   .footer__links a {
-	color: #333;	
 	color: rgb(98, 95, 95);
 	text-decoration: none;
 	font-size: 18px;
 	margin-right: 1rem;
+	padding-right: 25px;
   }
   .footer__links a:hover {
 	transform: scale(1.2);
@@ -52,6 +52,7 @@
 	color: rgb(98, 95, 95);
 	display: flex;
 	justify-content: space-between;
+	padding-right: 25px;
   }
   .copiright:hover {
 	text-decoration: underline;
