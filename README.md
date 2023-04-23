@@ -1,5 +1,5 @@
 Bienvenido a [Preset-Maxi-Avila-Fotografia]
-![App Presets Maxi Avila Fotografia](./public/img/readme.jpg.)
+![App Presets Maxi Avila Fotografia](./public/img/readme.jpg)
 
 Esta es una aplicación de eCommerce de presets de fotografía creada en ReactJS. La aplicación te permite comprar presets de fotografía para aplicarlos a tus fotos y lograr un aspecto profesional y de alta calidad.
 
