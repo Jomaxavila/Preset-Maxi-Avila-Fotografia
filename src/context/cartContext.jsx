@@ -56,6 +56,7 @@ const addToCart = (product, quantity) => {
   }
 };
 
+
   return (
     <cartContext.Provider
       value={{

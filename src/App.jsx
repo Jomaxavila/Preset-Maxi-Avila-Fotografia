@@ -18,7 +18,6 @@ function App (props) {
     <>
       <CartProvider>
       <BrowserRouter>
-        <div className="page-container">
           <Navbar />
           <Title />
           <Routes>
@@ -28,7 +27,6 @@ function App (props) {
             <Route path="/category/:categoryid" element={<ItemListContainer />} />
             <Route path="/checkout/:orderid" element={<Checkout />} />
           </Routes>
-        </div>
         <Footer />
       </BrowserRouter>
     </CartProvider>
