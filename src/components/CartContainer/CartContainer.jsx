@@ -41,11 +41,11 @@ function CartContainer() {
                   <h2>{item.title}</h2>
                   <p>Cantidad: {item.count}</p>
                   <p>Precio: ${item.price}</p>
-                  <td>{item.count}</td>
+                  <p>{item.count}</p>
                   <button onClick={() => removeItemFromCart(item.id)}>
                     Eliminar
                   </button>
-                  <th>Total ${item.count * item.price }</th>
+                  <p>Total ${item.count * item.price }</p>
               </div>
             ))}
           </div>
