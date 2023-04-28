@@ -119,3 +119,22 @@
 	box-shadow: 0px 4px 5px #d7d7db;
   }
   
+
+  @media (max-width: 375px) {
+
+	.cart-container {
+		background-color: #ebebeb;
+		border: 1px solid rgb(216, 209, 209);
+		border-radius: 4px;
+		margin-bottom: 160px;
+		flex-direction: column;
+		align-items: center;
+	  }
+	  .item-card_detail{
+		margin-bottom: 50px;
+	  }
+	  .item-card_detail Button{
+		margin-bottom: auto;
+
+	  }
+  }
